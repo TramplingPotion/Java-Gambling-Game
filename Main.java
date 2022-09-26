@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,21 +16,21 @@ public class Main {
         int gamble;
         Scanner sc = new Scanner(System.in);
         int number = 0;
-      do {  
-        gamble = (int)(Math.random() * 10);
-        System.out.println("Enter Your Number (0-10): ");
-        number = sc.nextInt();
+        do {
+            gamble = (int) (Math.random() * 10);
+            System.out.println("Enter Your Number (0-10): ");
+            number = sc.nextInt();
 
-      
-        if (number > 10 || number < 0){
-            System.err.println("Error");
-        } else if (number == gamble){
-            System.out.println("You Won!");
-            System.out.println("The Answer is " + gamble);
-        } else if (number != gamble){
-            System.out.println("You Lose!");
-            System.out.println("The Answer is " + gamble);
-        }
-      } while (gamble != number);
+            if (number > 10 || number < 0) {
+                System.err.println("Error");
+            } else if (number == gamble) {
+                System.out.println("You Won!");
+                System.out.println("The Answer is " + gamble);
+            } else if (number != gamble) {
+                System.out.println("You Lose!");
+                System.out.println("The Answer is " + gamble);
+            }
+        } while (gamble != number);
     }
 }
+
